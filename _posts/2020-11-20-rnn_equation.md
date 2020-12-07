@@ -43,7 +43,7 @@ We are finally ready to see how this translates to equation (1). Quax. et. al ta
 
 Here, we can see that the time constant in equation (1) arises from the exponential kernel. Also, subtracting the previous hidden state naturally emerges from taking the derivative of the well-motivated equation (5). 
 
-In the artifical intelligence community, this is generally enough. However, in biology the membrance capacitance and resistance make it so that neural firing does not immediately follow the current. Quax. et. al model the delay in firing rate by adding a second equation to model the delay in firing rate. 
+In biology, the membrance capacitance and resistance make it so that neural firing does not immediately follow the current. Quax. et. al model the delay in firing rate by adding a second equation to model the delay in firing rate. 
 
 ![Firing Rate](/images/IMG-2565.jpg) 
 
@@ -52,9 +52,11 @@ Quax et. al then use Euler's approximation to convert these continuous time diff
 
 ![Firing Rate](/images/IMG-2568.jpg) 
 
-In the machine learning community, alpha_r is set to 1. Setting alpha_r to one brings us back to equation (1), except now in discrete time domain. 
+In the machine learning community, the membrane time constants are typically ignored and set to 1. Doing so bring us to equation (1), except now in discrete time domain. 
 
 ![Full Circle](/images/IMG-2567.jpg) 
+
+We've now come full circle, and hopefully this article helped you gain a better intuition behind the RNN hidden state update equation. 
 
 
 
