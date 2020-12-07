@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Understanding Recurrent Neural Network Hidden State Updates 
+title: Motivating RNNs from a Neuroscience Perspective 
 ---
 
 The first equation I was introduced to when learning about recurrent neural networks (RNNs) is the following: 
@@ -11,8 +11,6 @@ The first equation I was introduced to when learning about recurrent neural netw
 In this equation, x(t) represents the RNN hidden state. r(t) is equal to f(x(t)), where f() represents a nonlinear function, and u(t) is our input. In essence, what this equation is telling us is that our RNN hidden state evolves through time according  to a matrix transformation of the previous hidden state and the input. That makes sense. You should update your state according to new, incoming information as well as information from the previous state. However, what never made sense to me was the -x(t) term. Why do you subtract your previous hidden state? Also, where does the time constant tau come from?
 
 Then, I read a paper titled "Adaptive Time Scales in Recurrent Neural Networks", written by Silvan Quax, Michele D'asaro, and Marcel A.J. van Gerven. The authors beautifully motivate the RNN equations and provide a satisfying explanation for each term, including the -x(t) term and the time constant.  
-
-* Note: This explanation is from a neuroscience perspective, and so might not be interesting for those coming from a purely ML background. 
 
 The authors start by first modeling a neural spiking activity with the impulse response function. The impulse response function shoots to infinity at time t=ti (approximating an action potential), and otherwise is 0. 
 
