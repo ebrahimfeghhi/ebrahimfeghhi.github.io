@@ -50,7 +50,7 @@ In the artifical intelligence community, this is generally enough. However, in b
 Quax et. al then use Euler's approximation to convert these continuous time differential equations into discrete hidden state updates. They also add an in an input term, resulting in equation (8).
 
 
-![Firing Rate](/images/IMG-2569.jpg) 
+![Firing Rate](/images/IMG-2568.jpg) 
 
 In the machine learning community, alpha_r is set to 1. Setting alpha_r to one brings us back to equation (1), except now in discrete time domain. 
 
