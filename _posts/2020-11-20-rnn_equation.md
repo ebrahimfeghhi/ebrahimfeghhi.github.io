@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Motivating RNNs from a Neuroscience Perspective 
+title: Motivating Recurrent Neural Networks from a Neuroscience Perspective 
 ---
 
-The first equation I was introduced to when learning about recurrent neural networks (RNNs) is the following: 
+The first equation I was introduced to when learning about recurrent neural networks (RNNs) was the following: 
 
 ![RNN Hidden State Update Equation](/images/IMG-2557.jpg) 
 
