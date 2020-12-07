@@ -10,6 +10,9 @@ In my free time, my main hobby is practicing jiu-jitsu and wrestling. I also enj
 
 I'm currently looking to apply to labs for PhD. My interests are in applying machine learning and computational modeling tools to further our understanding of the brain and neuropsychiatric disorders. 
 
+### Code
+To access my github code repository, click the github icon on the bottom of the page. 
+
 
 
 ### Contact me
