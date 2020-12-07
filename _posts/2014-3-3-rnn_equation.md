@@ -5,7 +5,7 @@ title: Understanding Recurrent Neural Network Hidden State Updates
 
 The first equation I was introduced to when learning about recurrent neural networks (RNNs) is the following: 
 
-![RNN Hidden State Update Equation](/images/IMG-2556.jpg) 
+![RNN Hidden State Update Equation](/images/IMG-2557.jpg) 
 
 
 In this equation, x(t) represents the RNN hidden state. r(t) is equal to f(x(t)), where f() represents a nonlinear function, and u(t) is our input. In essence, what this equation is telling us is that our RNN hidden state evolves through time according  to a matrix transformation of the previous hidden state and the input. That makes sense. You should update your state according to new, incoming information as well as information from the previous state. However, what never made sense to me was the -x(t) term. Why do you subtract your previous hidden state? 
@@ -14,7 +14,13 @@ Then, I read a paper titled "Adaptive Time Scales in Recurrent Neural Networks",
 
 The authors start by first modeling a neural spiking activity with the impulse response function. The impulse response function shoots to infinity at time t=ti (approximating an action potential), and otherwise is 0. 
 
+
+![Impulse Response](/images/IMG-2558.jpg) 
+
 Next, they model the synaptic current that a neuron receives through the following formula:
+
+![Current Spiking version](/images/IMG-2559.jpg) 
+
 
 
 Here, wnk represents the strength of the synaptic weight connection fron neuron k to neuron n. K() is a function which approximates the transformation of an action potential, from neuron k, to the the amount of synaptic current the postsynaptic neuron receives (neuron n). K() is modeled by an exponential kernel in this paper. The mathematics behind the choice for K() is somewhat beyond the scope of this article, but the underlying intuition is the following. If we assume that a neuron is firing at a constant rate with period T, then the value of the firing rate averaged over T should be 1/T. Working through the math we get the requirement that our kernel choice should integrate to 1. The exponential kernel satisfies this property, and also acts as a low-pass filter for the impulse response, jumping up in activity and then slowly decaying. This models synaptic currents in biology well. 
@@ -33,7 +39,7 @@ Here, we can see that the time constant in equation (1) arises from the exponent
 We can fully relate this to equation (1) by adding in sensory inputs, and using Euler's method to approximate the continous version of this equation into a discrete hidden state update. 
 
 
-Equation (10) in its current form only models the current that the postsynaptic neuron receives. In the artifical intelligence community, this is generally enough. However, in biology the membrance capacitance and resistance make it so that neural firing does not immediately follow the current. In the next part, I will go over how Quax et. al extend equation (10) to also model the delay in the firing rate and interesting results they find. 
+Equation (10) in its current form only models the current that the postsynaptic neuron receives. In the artifical intelligence community, this is generally enough. However, in biology the membrance capacitance and resistance make it so that neural firing does not immediately follow the current. In the next part, I will go over how Quax et. al extend equation (10) to also model the delay in the firing rate and interesting results they find in their paper.  
 
 
 
