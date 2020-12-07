@@ -39,13 +39,22 @@ The authors then replace the spike train term in equation (2) with the rate code
 
 We are finally ready to see how this translates to equation (1). Quax. et. al take the derivative of the synpatic current. I'm going to gloss over this step, but the end result is written in equation (6). 
 
-![Rate code](/images/IMG-2564.jpg) 
+![Current Derivative](/images/IMG-2564.jpg) 
 
 Here, we can see that the time constant in equation (1) arises from the exponential kernel. Also, subtracting the previous hidden state naturally emerges from taking the derivative of the well-motivated equation (5). 
 
-In the artifical intelligence community, this is generally enough. However, in biology the membrance capacitance and resistance make it so that neural firing does not immediately follow the current. Quax. et. al model the delay in firing rate by adding a second equation. 
+In the artifical intelligence community, this is generally enough. However, in biology the membrance capacitance and resistance make it so that neural firing does not immediately follow the current. Quax. et. al model the delay in firing rate by adding a second equation to model the delay in firing rate. 
+
+![Firing Rate](/images/IMG-2565.jpg) 
+
+Quax et. al then use Euler's approximation to convert these continuous time differential equations into discrete hidden state updates. They also add an in an input term, resulting in equation (8).
 
 
+![Firing Rate](/images/IMG-2567.jpg) 
+
+In the machine learning community, alpha_r is set to 1. Setting alpha_r to one brings us back to equation (1), except now in discrete time domain. 
+
+![Firing Rate](/images/IMG-2568.jpg) 
 
 
 
