@@ -8,7 +8,7 @@ The first equation I was introduced to when learning about recurrent neural netw
 ![RNN Hidden State Update Equation](/images/IMG-2557.jpg) 
 
 
-In this equation, x(t) represents the RNN hidden state. r(t) is equal to f(x(t)), where f() represents a nonlinear function, and u(t) is our input. In essence, what this equation is telling us is that our RNN hidden state evolves through time according  to a matrix transformation of the previous hidden state and the input. That makes sense. You should update your state according to new, incoming information as well as information from the previous state. However, what never made sense to me was the -x(t) term. Why do you subtract your previous hidden state? Also, where does the time constant tau come from?
+In this equation, i(t) represents the RNN hidden state. r(t) is equal to f(i(t)), where f() represents a nonlinear function, and u(t) is our input. In essence, what this equation is telling us is that our RNN hidden state evolves through time according  to a matrix transformation of the previous hidden state and the input. That makes sense. You should update your state according to new, incoming information as well as information from the previous state. However, what never made sense to me was the -i(t) term. Why do you subtract your previous hidden state? Also, where does the time constant tau come from?
 
 Then, I read a paper titled "Adaptive Time Scales in Recurrent Neural Networks", written by Silvan Quax, Michele D'asaro, and Marcel A.J. van Gerven. The authors beautifully motivate the RNN equations and provide a satisfying explanation for each term, including the -x(t) term and the time constant.  
 
